@@ -24,7 +24,7 @@ app.get('/', async (req, res) => {
   try {
     const visitor = {
       date: new Date(),
-      name: req.query ? req.query.name : 'Anónimo',
+      name: req.query.name ? req.query.name : 'Anónimo',
     }
     console.log('TLC: visitor', visitor)
     await Visitor.create(visitor)
